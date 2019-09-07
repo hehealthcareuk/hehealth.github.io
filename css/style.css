@@ -1,0 +1,177 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.background-image {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  display: block;
+  background-image: url('/images/img1.PNG');
+  width: 1200px;
+  height: 800px;
+}
+
+.content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  /* The image used */
+  /* background-image: url("/images/image1.jpg"); */
+
+  /* Add the blur effect */
+  filter: blur(1px);
+  -webkit-filter: blur(1px) grayscale(80%);
+
+  /* Full height
+  height: 100%;
+ 
+  background-position: center;
+ 
+  background-repeat: no-repeat;
+  background-size: auto; */
+   /* The image used */
+   background-image: url("/images/image2.jpg");
+
+   /* Full height */
+   height: 100%; 
+ 
+   /* Center and scale the image nicely */
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 70%;
+  padding: 20px;
+  text-align: center;
+}
+
+hr.new5 {
+  /* border: 2px solid rgb(255, 255, 255); */
+  border: 2px solid rgb(175, 5, 5);
+  border-radius: 5px;
+
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+}
+
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  position: relative;
+  opacity: 0.65;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.bgimg-1 {
+  background-image: url("/images/image2.jpg");
+  height: 100%;
+
+}
+
+.bg-image .logo-style{
+  width: 20rem; 
+  height: 8rem; 
+  position: absolute;
+  top: -50%;left: 50%; 
+  transform: translate(-50%, 50%);
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 30%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+  
+}
+
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 32px;
+  letter-spacing: 10px;
+  
+}
+
+.caption .paddingtop{
+  margin-top: 2rem;
+}
+
+.caption .font{
+  font: 400 15px/1.8 "Lato", sans-serif;
+}
+
+.caption span.content {
+  /* background-color: #111;
+  color: #fff; */
+  color: #000;
+  padding: 18px;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif;
+  color: #111;
+}
+

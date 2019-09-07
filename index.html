@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+
+    <script>
+        function start() {
+
+            var myform = $("form#myform");
+            myform.submit(function (event) {
+                event.preventDefault();
+
+                // Change to your service ID, or keep using the default service
+                var service_id = "default_service";
+                var template_id = "subscribe";
+
+                myform.find("button").text("Sending...");
+                emailjs.sendForm(service_id, template_id, myform[0])
+                    .then(function () {
+                        alert("Sent!");
+                        myform.find("button").text("Send");
+                    }, function (err) {
+                        alert("Send email failed!\r\n Response:\n " + JSON.stringify(err));
+                        myform.find("button").text("Send");
+                    });
+                return false;
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <div class="bg-image"></div>
+
+    <div class="bg-text">
+        <img src="images/logo2.png"
+            style="width: 20rem; height: 8rem; position: absolute;top: -50%;left: 50%; transform: translate(-50%, 50%) ;z-index: 100; "> <br>
+        <!--<h2>Coming Soon</h2>-->
+        <h1 style="font-size:55px; font-family:sans-serif; letter-spacing: 1.5px">COMING SOON</h1> <br>
+        <div style="margin-left: 400px; margin-right: 400px;  margin-top: -1.5rem; margin-bottom: 2rem;">
+			<hr class="new5">
+		</div>
+        <p style="font-size:16px; font-family:sans-serif; letter-spacing: 1.5px; font-weight: 400">We're currently working on creating our new website. <br> 
+        We'll be launching soon, enter your email to get contacted by our team. </p><br>
+
+        <div style="font-size:16px; font-family:sans-serif; letter-spacing: 1.5px;font-weight: 400; margin-left: -4rem">
+
+            <form id="myform" method="post">
+
+                Enter Your Email: <input type='email' name='email' class='form-class'><br><br>
+                <input type='submit' value='Send' class='btn btn-primary' style="padding-left: 5rem;padding-right: 5rem; margin-left: 10rem;margin-bottom: 2rem;  background-color: rgb(175, 5, 5);">
+            </form>
+
+
+            <!-- <a href="ViewerJS/#../and.pptx">Test Baby</a> -->
+
+        </div>
+    </div>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+    <script type="text/javascript">
+       (function(){
+          emailjs.init("user_vPhM9lNYoUWCAC3C6hoEH");
+       })();
+    </script>
+
+</body>
+
+</html>
